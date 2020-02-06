@@ -1,0 +1,6 @@
+<mat-card *ngIf="imagePreview !== '' ">
+  <div class="image-preview" *ngIf="imagePreview !== '' ">
+    <img *ngIf="imagePreview" [src]="imagePreview"  [alt]="">
+    <div class="description">{{description}}</div>
+  </div>
+</mat-card>

@@ -1,0 +1,2247 @@
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+/* You can add global styles to this file, and also import other style files */
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: table;
+  visibility: hidden;
+}
+body {
+  padding: 50px;
+  font: 14px "Calibri", Helvetica, Arial, sans-serif;
+
+}
+a {
+  color: #00B7FF;
+  cursor: pointer;
+}
+a:hover,
+a:active {
+  color: #00B7FF;
+  text-decoration: underline;
+}
+a.danger {
+  color: red;
+}
+.spacing {
+  margin-bottom: 20px;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+/*app-header{
+    background-color: red;
+}
+*/
+/*----------------------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* div.gamecontainer {
+  width: 100%;
+  height: 100%;
+  /* small devices*/
+  /* margin:15%;*/
+
+  /* margin:  3% auto;
+}  */
+.startbutton {
+  /* position: relative;*/
+}
+#startthegame {
+  position: absolute;
+  border: thick black solid;
+  left: 75%;
+  /* top: 284px;*/
+  top: 62%;
+  line-height: 19px;
+  width: 247px;
+  text-align: center;
+  background-color: #e2d12b;
+  box-shadow: 0 15px #999;
+  border-radius: 15px;
+  font-size: 13px;
+  margin-top: 4em;
+}
+#startthegame:hover {
+  background-color: #3e8e41
+}
+#startthegame:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+body {
+
+  /* background: #ffffff url('../img/geometry2.png');
+  Background pattern from Subtle Patterns
+  font-family: 'Coda', cursive; */
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/*
+ * Styles for the deck of cards
+ */
+.deck {
+  /* width: 660px;*/
+  /* width: 108%; */
+  min-height: 355px;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  padding: 6%;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0;
+}
+div.card.backside {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  /*height: 125px;
+  width: 125px;*/
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 0;
+  /*color: #ffffff;*/
+  border-radius: 8px;
+}
+.greeting {
+  /* display: inline-block; */
+  /* border: thick black solid; */
+  /* line-height: 61px; */
+  background-color: #e2d12b;
+  box-shadow: 0 15px #999;
+  border-radius: 15px;
+  font-size: 34px;
+  width: 94%;
+  font-size: 17px;
+  margin-top: -120px;  display: block;
+  margin-left: 49px;
+}
+.greeting:hover {
+  background-color: #3e8e41
+}
+.greeting:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+.gameendwindow {
+  width: 100%;
+    /* background-color: beige; */
+    height: 100%;
+    /* display: inline-block; */
+    text-align: center;
+    /* display: none; */
+    /* padding-top: 255px; */
+    margin-bottom: 24%;
+}
+.replaythegame {
+  font-size: 50px;
+}
+div.card.frontside {
+  background-color: cyan;
+  color: black;
+  /*height: 125px;
+  width: 125px;*/
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  /*color: #ffffff;*/
+  border-radius: 8px;
+  /*    background: #2e3d49;
+*/
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.frontandbacksidediv {
+  /*height: 125px;
+  width: 125px;*/
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+}
+.cardContainer {
+  height: 54px;
+  /*  width: 125px;
+*/
+  width: 21%;
+  font-size: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  position: relative;
+  /*text-indent: 180px;*/
+  outline-width: 0px;
+}
+.danse {
+  /*  text-indent: 0;*/
+}
+.deck .card {
+  /*height: 125px;
+  width: 125px;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;*/
+  /*----------------*/
+  /*cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);*/
+}
+.deck .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+}
+.deck .card.show {
+  font-size: 33px;
+}
+.deck .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+}
+/*
+ * Styles for the Score Panel
+ */
+ /* .pause{
+  position: absolute;
+  border: thick black solid;
+  left: 75%;
+  top: 58%;
+  line-height: 19px;
+  width: 247px;
+  text-align: center;
+  background-color: #e2d12b;
+  box-shadow: 0 15px #999;
+  border-radius: 15px;
+  font-size: 13px;
+  margin-top: 9em;
+ } */
+ .pause:hover {
+  background-color: #3e8e41
+}
+.pause:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+.continue{
+  position: absolute;
+  border: thick black solid;
+  left: 75%;
+  /* top: 284px; */
+  top: 201%;
+  line-height: 19px;
+  width: 247px;
+  text-align: center;
+  background-color: #e2d12b;
+  box-shadow: 0 15px #999;
+  border-radius: 15px;
+  font-size: 13px;
+}
+ .continue:hover {
+  background-color: #3e8e41
+}
+.continue:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+.alert{
+  position: absolute;
+  border: thick black solid;
+  left: 75%;
+  /* top: 284px; */
+  top: 147%;
+  line-height: 19px;
+  width: 247px;
+  text-align: center;
+  background-color: #e2d12b;
+  box-shadow: 0 15px #999;
+  border-radius: 15px;
+  font-size: 13px;
+}
+.moveblock {
+  line-height: 19px;
+  width: 247px;
+  text-align: center;
+  background-color: #e2d12b;
+  margin-top: 2em;
+  /*  background-color:red;
+*/
+  /*    box-shadow: 0 15px #999;*/
+  border-radius: 15px;
+  font-size: 13px;
+  position: absolute;
+  /*  left: 768px;*/
+  left: 0%;
+  /* top: 284px;*/
+  top: 62%;
+  border: thick black solid;
+}
+.blockcount {
+  position: absolute;
+  line-height: 19px;
+  width: 247px;
+  text-align: center;
+  background-color: #e2d12b;
+  /*    box-shadow: 0 15px #999;*/
+  border-radius: 15px;
+  font-size: 13px;
+  /*left: 768px;*/
+  left: 0%;
+  /*  top: 100px;*/
+  top: 44%;
+  border: thick black solid;
+}
+/*.moveblock:hover {background-color: #3e8e41}
+.moveblock:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}*/
+.restart {
+  position: absolute;
+  /*  left: -600px;*/
+  left: 75%;
+  width: 247px;
+  border: thick black solid;
+  line-height: 19px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 15px #999;
+  background-color: #e2d12b;
+  font-size: 13px;
+  /* top: 123px;*/
+  top: 44%;
+}
+.stars {
+  /*position: relative;*/
+  list-style-type: none;
+}
+.all-stars div {
+  display: inline-block;
+}
+.all-stars {
+  line-height: 25px;
+  width:199px;
+  text-align: center;
+  background-color: #e2d12b;
+  margin-left: -3px;
+  margin-bottom: 35px;
+  /*    box-shadow: 0 15px #999;*/
+  border-radius: 15px;
+  font-size: 23px;
+  /*position: absolute;*/
+  /* left: 768px;
+    top: 100px;*/
+  border: thick black solid;
+}
+.restart:hover {
+  background-color: #3e8e41
+}
+.restart:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+  height: 110px
+  /* position: relative;*/
+}
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+header {
+  margin-bottom: 53px;
+  /*  font-weight: 400px;*/
+}
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+@media screen and (min-device-width: 4800px) and (orientation: portrait) {
+  /* some CSS here */
+  /* div.gamecontainer {
+    width: 100%;
+    height: 100%;
+    /* small devices*/
+    /* margin: 15%; */
+    /* margin:  3% auto;
+  }  */
+  .greeting {
+    width: 94%;
+  }
+  #startthegame {
+    position: absolute;
+    border: thick black solid;
+    left: -9%;
+    /* top: 284px;*/
+    top: 62%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 4em;
+  }
+  .deck {
+    /* width: 660px;*/
+    /* width: 63%; */
+    /* width: 108%; */
+    min-height: 355px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 6%;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0;
+  }
+  div.card.backside {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+  }
+  .gameendwindow {
+    width: 100%;
+    /* background-color: beige; */
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    /* display: none; */
+    padding-top: 255px;
+  }
+  div.card.frontside {
+    background-color: cyan;
+    color: black;
+    /*height: 125px;
+  width: 125px;*/
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+    /*    background: #2e3d49;
+*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .frontandbacksidediv {
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+  .cardContainer {
+    height: 54px;
+    /*  width: 125px;
+*/
+    width: 21%;
+    font-size: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    position: relative;
+    /*text-indent: 180px;*/
+    outline-width: 0px;
+  }
+  .moveblock {
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-top: 2em;
+    /*  background-color: red;
+*/
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    position: absolute;
+    /*  left: 768px;*/
+    left: 84%;
+    /* top: 284px;*/
+    top: 62%;
+    border: thick black solid;
+  }
+  .blockcount {
+    position: absolute;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    /*left: 768px;*/
+    left: -9%;
+    /*  top: 100px;*/
+    top: 44%;
+    border: thick black solid;
+  }
+  /*.moveblock:hover {background-color: #3e8e41}
+.moveblock:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}*/
+  .restart {
+    position: absolute;
+    /*  left: -600px;*/
+    left: 84%;
+    width: 247px;
+    border: thick black solid;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px #999;
+    background-color: #e2d12b;
+    font-size: 13px;
+    /* top: 123px;*/
+    top: 44%;
+  }
+  .stars {
+    /*position: relative;*/
+    list-style-type: none;
+  }
+  .all-stars div {
+    display: inline-block;
+  }
+  .all-stars {
+    line-height: 25px;
+    width: 199px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-left:-3px;
+    margin-bottom: 35px;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 23px;
+    /*position: absolute;*/
+    /* left: 768px;
+    top: 100px;*/
+    border: thick black solid;
+  }
+  .post-create {
+    position: absolute;
+      bottom: -40em;
+      width: 477px;
+      margin-left: 78px;
+      margin-bottom: -1%;
+      top:39em;
+  }
+  div.post-list {
+    position: absolute;
+      width: 429px;
+      left: 69%;
+      bottom: -40em;
+      margin-bottom: -1%;
+      height: 296px;
+      top: 42em;
+
+  }
+  .post-container {
+    /* background-color: lightblue; */
+    width: 429px;
+    height: 254px;
+    overflow: scroll;
+  }
+  .message{
+    position: absolute;
+    bottom: -160%;
+    left: 81%;
+  }
+  .portrait{
+    margin-left: 4%;
+    position: absolute;
+    width: 3%;
+  }
+  .users-performance{
+      width: 245px;
+      overflow: scroll;
+      position: absolute;
+      left: 19%;
+      top: 15em;
+      text-align: center;
+      height: 213px;
+  }
+
+  .performances-chart{
+      /* width: 12%; */
+      position: absolute;
+      height: 120%;
+      left: 5%;
+      top: 116%;
+      text-align: center;
+  }
+
+  .my-best-performance{
+      width: 16%;
+      position: absolute;
+      left: 43%;
+      top: 37em;
+  }
+  .pause{
+    position: absolute;
+    border: thick black solid;
+    left: 75%;
+    /* top: 284px; */
+    top: 58%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 9em;
+   }
+   .description{
+    position: absolute;
+    top: -1.3em;
+    font-size: 6px;
+    width: 17em;
+    font-weight: bold;
+  }
+  .d3-chart {
+    width: 100%;
+    height: 400px;
+  }
+  span.message-status{
+    margin-left: 55px;
+      background-color: indianred;
+      width: 76px;
+      padding: 1px;
+      text-align: center;
+  }
+
+  .message-status-unread{
+    margin-left: 55px;
+      background-color: #5dcd5c;
+      width: 122px;
+      padding: 1px;
+      text-align: center;
+  }
+
+}
+/* #### Mobile Phones Landscape #### */
+@media screen and (min-device-width: 100px)and (max-device-width: 1436px) {
+  /* some CSS here */
+  /* div.gamecontainer {
+    width: 100%;
+    height: 100%; */
+    /* small devices*/
+    /* margin:15%;*/
+    /* margin:  3% auto;
+  } */
+  .greeting {
+    width: 94%;
+  }
+  #startthegame {
+    position: absolute;
+    border: thick black solid;
+    left: -9%;
+    /* top: 284px;*/
+    top: 62%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 4em;
+  }
+  .deck {
+    /* width: 660px;*/
+    /* width: 108%; */
+    min-height: 355px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 6%;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0;
+  }
+  div.card.backside {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+  }
+  .gameendwindow {
+    width: 86%;
+    margin-bottom: 0;
+    padding-top: 0;
+      /* background-color: beige; */
+    height:79%;
+
+    /* display: inline-block; */
+    text-align: center;
+    /* display: none; */
+    /* padding-top: 255px; */
+  }
+  .greeting{
+    /* display: inline-block;  */
+    /* border: thick black solid; */
+    /* line-height: 61px; */
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 34px;
+    width: 88%;
+    font-size: 11px;
+    margin-top: 61px;
+    display: block;
+    margin-left: 49px;
+  }
+  div.card.frontside {
+    background-color: cyan;
+    color: black;
+    /*height: 125px;
+  width: 125px;*/
+    height: 100%;
+    width: 100%;
+    font-size: 31px;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+    /*    background: #2e3d49;
+*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  textarea.my-text-area{
+    font-size: 7px;
+  }
+  .frontandbacksidediv {
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+  .cardContainer {
+    height: 54px;
+    /*  width: 125px;
+*/
+    width: 21%;
+    font-size: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    position: relative;
+    /*text-indent: 180px;*/
+    outline-width: 0px;
+  }
+  .moveblock {
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-top: 2em;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    position: absolute;
+    /*  left: 768px;*/
+    left: 84%;
+    /* top: 284px;*/
+    top: 62%;
+    border: thick black solid;
+  }
+  .blockcount {
+    position: absolute;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    /*left: 768px;*/
+    left: -9%;
+    /*  top: 100px;*/
+    top: 44%;
+    border: thick black solid;
+  }
+  /*.moveblock:hover {background-color: #3e8e41}
+.moveblock:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}*/
+  .restart {
+    position: absolute;
+    /*  left: -600px;*/
+    left: 84%;
+    width: 247px;
+    border: thick black solid;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px #999;
+    background-color: #e2d12b;
+    font-size: 13px;
+    /* top: 123px;*/
+    top: 44%;
+  }
+  .stars {
+    /*position: relative;*/
+    list-style-type: none;
+  }
+  .all-stars div {
+    display: inline-block;
+  }
+  .all-stars {
+    line-height: 25px;
+    width: 199px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-left:-3pxx;
+    margin-bottom: 35px;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 23px;
+    /*position: absolute;*/
+    /* left: 768px;
+    top: 100px;*/
+    border: thick black solid;
+  }
+
+  span.mat-expansion-indicator{
+    margin-left:12px;
+  }
+  span.message-status{
+   font-size:9px;
+   height: 12px;
+   width: 50%;
+   text-align: center;
+   padding: 1px;
+   background-color: indianred;
+  }
+  span.message-status-unread{
+    width: 49%;
+    height: 12px;
+    font-size:9px;
+    margin-left: 0px;
+    background-color: #5dcd5c;
+    padding: 1px;
+    text-align: center;
+  }
+  div.post-container{
+    width: 190px;
+    height: 125px;
+    overflow: scroll;
+    font-size:9px;
+    margin-top: 13px;
+  }
+  div.post-list{
+    position: absolute;
+    width: 403px;
+    left: 45%;
+    bottom: -21em;
+    margin-bottom: -1%;
+    height: 159px;
+    top: 30.4em;
+  }
+  button.pick-image{
+    line-height: 14px;
+    font-size: 7px;
+  }
+  button.save-button{
+    line-height: 14px;
+    font-size: 7px;
+  }
+  div.post-create{
+    width: 144px;
+    margin-bottom: -1%;
+    bottom: -92%;
+    font-size: 2.1px;
+    margin-left: 5px;
+    position: absolute;
+    top: 196em;
+  }
+  .all-stars{
+    line-height: 10px;
+    width: 115px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-left: -3px;
+    margin-bottom: 160px;
+    border-radius: 15px;
+    font-size: 10px;
+    border: 1.1px solid #000;
+  }
+  mat-toolbar.header-size{
+    font-size: 13px;
+  }
+  div.restart{
+    position: absolute;
+    left: 76%;
+    width: 62px;
+    border: 1.1px solid #000;
+    line-height: 11px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+    background-color: #e2d12b;
+    font-size: 11px;
+    top: 5%;
+  }
+  span.blockcount{
+    position: absolute;
+    line-height: 10px;
+    width: 51px;
+    text-align: center;
+    background-color: #e2d12b;
+    border-radius: 15px;
+    font-size: 12px;
+    left: 19%;
+    top: 7%;
+    border: 1.1px solid #000;
+  }
+  div.portrait{
+    margin-left: 4%;
+    position: absolute;
+    width: 9%;
+    margin-top: 5px;
+  }
+  div.image-preview{
+    height: 27px;
+    width: 33px;
+    margin: 1rem 0;
+}
+div.description{
+  position: absolute;
+    top: -1.3em;
+    font-size: 6px;
+    width: 17em;
+    font-weight: 700;
+}
+span.moveblock{
+  line-height: 11px;
+    width:46px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-top: 2em;
+    border-radius: 15px;
+    font-size: 11px;
+    position: absolute;
+    left: 19%;
+    top: 5%;
+    border: 1.1px solid #000;
+}
+span#startthegame{
+  position: absolute;
+    border: 1.1px solid #000;
+    left: 24.5em;
+    top: -3%;
+    line-height: 9px;
+    width: 72px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 3px #999;
+    border-radius: 15px;
+    font-size: 11px;
+    margin-top: 4em;
+}
+div.pause{
+  position: absolute;
+    border: 1.1px solid #000;
+    left: 75%;
+    top: -8%;
+    line-height: 8px;
+    width: 71px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 3px #999;
+    border-radius: 15px;
+    font-size: 9px;
+    margin-top: 9em
+}
+ul.deck{
+  min-height: 205px;
+    background: linear-gradient(160deg,#02ccba 0,#aa7ecd 100%);
+    padding: 6%;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46,61,73,.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+}
+li.cardContainer{
+  height: 34px;
+  width: 22%;
+  font-size: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 5px 2px 20px 0 rgba(46,61,73,.5);
+  position: relative;
+  outline-width: 0;
+}
+div.users-performance{
+  width: 162px;
+    overflow: scroll;
+    position: absolute;
+    font-size: 9px;
+    left: 4%;
+    top: 9em;
+    text-align: center;
+    height: 102px;
+}
+div.performances-chart{
+  position: absolute;
+  width: 192px;
+    height: 36%;
+    left: 45%;
+    top: 30%;
+    font-size: 9px;
+    text-align: center;
+}
+div.d3-chart{
+  width: 51%;
+  height: 91%;
+  margin-left: 47px;
+}
+div.my-best-performance{
+  width: 52%;
+    position: absolute;
+    left: 27%;
+    top: 23em;
+    font-size: 9px;
+}
+span.mat-badge{
+  font-weight: 700;
+  font-size: 9px;
+}
+span.mat-badge-content{
+  font-size: 6px;
+}
+span.my-title{
+  width: 50%;
+  font-size: 9px;
+}
+div.send-a-message span{
+  font-size:8px;
+}
+.message{
+  position: absolute;
+  bottom: -53%;
+  left: 86%;
+  color: peru;
+}
+i.new-message-icon{
+  font-size: 19px;
+}
+.users-perf-size{
+  height: 48px;
+  font-size: 7px;
+}
+}
+/*--------------------------------------*/
+@media screen and (min-device-width: 1437px) and (max-device-width: 3000px) {
+  /* some CSS here */
+  /* div.gamecontainer {
+    width: 100%;
+    height: 100%; */
+    /* small devices*/
+    /* margin:15%;*/
+    /* margin:  3% auto;
+  } */
+  .greeting {
+    width: 94%;
+  }
+  #startthegame {
+    position: absolute;
+    border: thick black solid;
+    left: 103%;
+    /* top: 284px;*/
+    top: 62%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 4em;
+  }
+  .deck {
+    /* width: 660px;*/
+    /* width: 108%; */
+    min-height: 355px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 6%;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0;
+  }
+  div.card.backside {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+  }
+  .gameendwindow {
+    width: 100%;
+    /* background-color: beige; */
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    /* display: none; */
+    padding-top: 255px;
+  }
+  div.card.frontside {
+    background-color: cyan;
+    color: black;
+    /*height: 125px;
+  width: 125px;*/
+    height: 100%;
+    width: 100%;
+    font-size: 31px;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+    /*    background: #2e3d49;
+*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .frontandbacksidediv {
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+  .cardContainer {
+    height: 54px;
+    /*  width: 125px;
+*/
+    width: 21%;
+    font-size: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    position: relative;
+    /*text-indent: 180px;*/
+    outline-width: 0px;
+  }
+  .moveblock {
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-top: 2em;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    position: absolute;
+    /*  left: 768px;*/
+    left: 53rem;
+    /* top: 284px;*/
+    top: -14rem;
+    border: thick black solid;
+  }
+  .blockcount {
+    position: absolute;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    /*left: 768px;*/
+    left: 1%;
+    /*  top: 100px;*/
+    top: 44%;
+    border: thick black solid;
+  }
+  /*.moveblock:hover {background-color: #3e8e41}
+.moveblock:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}*/
+  .restart {
+    position: absolute;
+    /*  left: -600px;*/
+    left: 53rem;
+    width: 247px;
+    border: thick black solid;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px #999;
+    background-color: #e2d12b;
+    font-size: 13px;
+    /* top: 123px;*/
+    top: -18rem;
+  }
+  .stars {
+    /*position: relative;*/
+    list-style-type: none;
+  }
+  .all-stars div {
+    display: inline-block;
+  }
+  .all-stars {
+    line-height: 25px;
+    width: 199px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-left:-71px;
+    margin-bottom: 35px;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 23px;
+    /*position: absolute;*/
+    /* left: 768px;
+    top: 100px;*/
+    border: thick black solid;
+  }
+  /*neww add*/
+  .post-create {
+    position: absolute;
+      bottom: -40em;
+      width: 477px;
+      margin-left: 78px;
+      margin-bottom: -1%;
+      top: 29em;
+  }
+  div.post-list {
+    position: absolute;
+      width: 429px;
+      left: 69%;
+      bottom: -42em;
+      margin-bottom: -1%;
+      height: 296px;
+      top: 30em;
+  }
+  .post-container {
+    /* background-color: lightblue; */
+    width: 429px;
+    height: 254px;
+    overflow: scroll;
+  }
+  .message{
+    position: absolute;
+    bottom: -160%;
+    left: 81%;
+  }
+  .portrait{
+    margin-left: 4%;
+    position: absolute;
+    width: 3%;
+  }
+  .users-performance{
+      width: 245px;
+      overflow: scroll;
+      position: absolute;
+      left: 19%;
+      top: 8em;
+      text-align: center;
+      height: 213px;
+  }
+
+  .performances-chart{
+      /* width: 12%; */
+      position: absolute;
+      height: 120%;
+      left: 5%;
+      top: 62%;
+      text-align: center;
+  }
+
+  .my-best-performance{
+      width: 16%;
+      position: absolute;
+      left: 43%;
+      top: 37em;
+  }
+  .pause{
+    position: absolute;
+    border: thick black solid;
+    left: -96%;
+    /* top: 284px; */
+    top: 58%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 9em;
+   }
+   .description{
+    position: absolute;
+    top: -1.3em;
+    font-size: 6px;
+    width: 17em;
+    font-weight: bold;
+  }
+  .d3-chart {
+    width: 100%;
+    height: 400px;
+  }
+  .chat i {
+    color: peru;
+    font-size: 49px;
+}
+span.message-status{
+  margin-left: 55px;
+    background-color: indianred;
+    width: 76px;
+    padding: 1px;
+    text-align: center;
+}
+
+.message-status-unread{
+  margin-left: 55px;
+    background-color: #5dcd5c;
+    width: 122px;
+    padding: 1px;
+    text-align: center;
+}
+
+
+  /*end new add*/
+}
+@media only screen and (min-width: 988000px)  and (max-width: 1468000px) {
+  /* some CSS here */
+  /* div.gamecontainer {
+    width: 100%;
+    height: 100%; */
+    /* small devices*/
+    /* margin:15%;*/
+   /* // margin-top: 29%; */
+    /* margin:  3% auto;
+  } */
+  .startbutton {
+    /* position: relative;*/
+  }
+  #startthegame {
+    position: absolute;
+    border: thick black solid;
+    left: 2%;
+    /* top: 284px;*/
+    top: 62%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 4em;
+  }
+  #startthegame:hover {
+    background-color: #3e8e41
+  }
+  #startthegame:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+  body {
+    /* background: #ffffff url('../img/geometry2.png'); */
+    /* Background pattern from Subtle Patterns */
+    /* font-family: 'Coda', cursive; */
+  }
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+  }
+  /*
+ * Styles for the deck of cards
+ */
+  .deck {
+    /* width: 660px;*/
+    /* width: 108%; */
+    min-height: 355px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding:6%;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0;
+  }
+  div.card.backside {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+  }
+  .greeting {
+    /* display: inline-block; */
+  /* border: thick black solid; */
+  /* line-height: 61px; */
+  background-color: #e2d12b;
+  box-shadow: 0 15px #999;
+  border-radius: 15px;
+  font-size: 34px;
+  width: 94%;
+  font-size: 17px;
+  margin-top: 70px;
+  display: block;
+  margin-left: 49px;
+  }
+  .greeting:hover {
+    background-color: #3e8e41
+  }
+  .greeting:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+  .gameendwindow {
+    width: 100%;
+    /* background-color: beige; */
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    /* display: none; */
+    padding-top: 255px;
+  }
+  .replaythegame {
+    font-size: 50px;
+  }
+  div.card.frontside {
+    background-color: cyan;
+    color: black;
+    /*height: 125px;
+  width: 125px;*/
+    height: 100%;
+    width: 100%;
+    font-size: 31px;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+    /*    background: #2e3d49;
+*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .frontandbacksidediv {
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+  .cardContainer {
+    height: 54px;
+    /*  width: 125px;
+*/
+    width: 21%;
+    font-size: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    position: relative;
+    /*text-indent: 180px;*/
+    outline-width: 0px;
+  }
+  .danse {
+    /*  text-indent: 0;*/
+  }
+  .deck .card {
+    height: 125px;
+  width: 125px;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+    /*----------------*/
+    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+  .deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+  }
+  .deck .card.show {
+    font-size: 33px;
+  }
+  .deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+  }
+  /*
+ * Styles for the Score Panel
+ */
+  .moveblock {
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-top: 2em;
+     /* background-color:red;*/
+  /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    position: absolute;
+    /*  left: 768px;*/
+    left: 73%;
+    /* top: 284px;*/
+    top: 62%;
+    border: thick black solid;
+  }
+  .blockcount {
+    position: absolute;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 13px;
+    /*left: 768px;*/
+    left: 2%;
+    /*  top: 100px;*/
+    top: 44%;
+    border: thick black solid;
+  }
+  .restart {
+    position: absolute;
+    /*  left: -600px;*/
+    left: 73%;
+    width: 247px;
+    border: thick black solid;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px #999;
+    background-color: #e2d12b;
+    font-size: 13px;
+    /* top: 123px;*/
+    top: 44%;
+  }
+  .stars {
+    /*position: relative;*/
+    list-style-type: none;
+  }
+  .all-stars div {
+    display: inline-block;
+  }
+  .all-stars {
+    line-height: 25px;
+    width: 199px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-left: -3px;
+    margin-bottom: 35px;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 23px;
+    /*position: absolute;*/
+    /* left: 768px;
+    top: 100px;*/
+    border: thick black solid;
+  }
+  .restart:hover {
+    background-color: #3e8e41
+  }
+  .restart:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+  .score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+    /* position: relative;*/
+  }
+  .score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+  .score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+  }
+  header {
+    margin-bottom: 53px;
+    /*  font-weight: 400px;*/
+  }
+  .score-panel .restart {
+    float: right;
+    cursor: pointer;
+  }
+  /*neww add*/
+  .post-create {
+    position: absolute;
+      bottom: -40em;
+      width: 477px;
+      margin-left: 78px;
+      margin-bottom: -1%;
+      top: 39em;
+  }
+  div.post-list {
+    position: absolute;
+      width: 429px;
+      left: 69%;
+      bottom: -40em;
+      margin-bottom: -1%;
+      height: 296px;
+      top: 42em;
+  }
+  .post-container {
+    /* background-color: lightblue; */
+    width: 429px;
+    height: 254px;
+    overflow: scroll;
+  }
+  .message{
+    position: absolute;
+    bottom: -160%;
+    left: 81%;
+  }
+  .portrait{
+    margin-left: 4%;
+    position: absolute;
+    width: 3%;
+  }
+  .users-performance{
+      width: 245px;
+      overflow: scroll;
+      position: absolute;
+      left: 19%;
+      top: 15em;
+      text-align: center;
+      height: 213px;
+  }
+
+  .performances-chart{
+      /* width: 12%; */
+      position: absolute;
+      height: 120%;
+      left: 5%;
+      top: 116%;
+      text-align: center;
+  }
+
+  .my-best-performance{
+      width: 16%;
+      position: absolute;
+      left: 43%;
+      top: 37em;
+  }
+  .pause{
+    position: absolute;
+    border: thick black solid;
+    left: 75%;
+    /* top: 284px; */
+    top: 58%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 9em;
+   }
+   .description{
+    position: absolute;
+    top: -1.3em;
+    font-size: 6px;
+    width: 17em;
+    font-weight: bold;
+  }
+  .d3-chart {
+    width: 100%;
+    height: 400px;
+  }
+  .chat i {
+    color: peru;
+    font-size: 49px;
+}
+span.message-status{
+  margin-left: 55px;
+    background-color: indianred;
+    width: 76px;
+    padding: 1px;
+    text-align: center;
+}
+
+.message-status-unread{
+  margin-left: 55px;
+    background-color: #5dcd5c;
+    width: 122px;
+    padding: 1px;
+    text-align: center;
+}
+
+
+  /*end new add*/
+}
+/*--------------------------------------------*/
+@media only screen and (min-width:50100px) and (max-width:98700px) {
+  /* some CSS here */
+  /* div.gamecontainer {
+    width: 100%;
+    height: 100%; */
+    /* small devices*/
+    /* margin:15%;*/
+    /* //margin-top: 29%; */
+    /* margin:  3% auto;
+  } */
+  .startbutton {
+    /* position: relative;*/
+  }
+  #startthegame {
+    position: absolute;
+    border: thick black solid;
+    left: 2%;
+    /* top: 284px;*/
+    top: 26%;
+    line-height:41px;
+    width: 212px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 34px;
+    margin-top: 4em;
+  }
+  #startthegame:hover {
+    background-color: #3e8e41
+  }
+  #startthegame:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+  body {
+    /* background: #ffffff url('../img/geometry2.png');
+    /* Background pattern from Subtle Patterns */
+     /*font-family: 'Coda', cursive; */
+  }
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+  }
+  /*
+ * Styles for the deck of cards
+ */
+  .deck {
+    /* width: 108%; */
+    min-height: 355px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding:6%;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0;
+  }
+  div.card.backside {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+  }
+  .greeting {
+    /* display: inline-block; */
+  /* border: thick black solid; */
+  /* line-height: 61px; */
+  background-color: #e2d12b;
+  box-shadow: 0 15px #999;
+  border-radius: 15px;
+  font-size: 34px;
+  width: 94%;
+  font-size: 17px;
+  margin-top: 70px;  display: block;
+  margin-left: 49px;
+  }
+  .greeting:hover {
+    background-color: #3e8e41
+  }
+  .greeting:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+  .gameendwindow {
+    width: 100%;
+    /* background-color: beige; */
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    /* display: none; */
+    padding-top: 255px;
+  }
+  .replaythegame {
+    font-size: 50px;
+  }
+  div.card.frontside {
+    background-color: cyan;
+    color: black;
+    /*height: 125px;
+  width: 125px;*/
+    height: 100%;
+    width: 100%;
+    font-size: 31px;
+    /*color: #ffffff;*/
+    border-radius: 8px;
+    /*    background: #2e3d49;
+*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .frontandbacksidediv {
+    /*height: 125px;
+  width: 125px;*/
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+  .cardContainer {
+    height: 54px;
+    /*  width: 125px;
+*/
+    width: 21%;
+    font-size: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    position: relative;
+    /*text-indent: 180px;*/
+    outline-width: 0px;
+  }
+  .danse {
+    /*  text-indent: 0;*/
+  }
+  .deck .card {
+    height: 125px;
+  width: 125px;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+    /*----------------*/
+    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+  .deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+  }
+  .deck .card.show {
+    font-size: 33px;
+  }
+  .deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+  }
+  /*
+ * Styles for the Score Panel
+ */
+  .moveblock {
+    line-height: 41px;
+    width: 212px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-top: 2em;
+     /* background-color:red;*/
+  /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 45px;
+    position: absolute;
+    /*  left: 768px;*/
+    left: 52%;
+    /* top: 284px;*/
+    top: 26%;
+    border: thick black solid;
+  }
+  .blockcount {
+    position: absolute;
+    line-height: 41px;
+    width: 212px;
+    text-align: center;
+    background-color: #e2d12b;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 45px;
+    /*left: 768px;*/
+    left: 2%;
+    /*  top: 100px;*/
+    top: 19%;
+    border: thick black solid;
+  }
+  .restart {
+    position: absolute;
+    /*  left: -600px;*/
+    left: 52%;
+    width: 212px;
+    border: thick black solid;
+    line-height: 41px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px #999;
+    background-color: #e2d12b;
+    font-size: 41px;
+    /* top: 123px;*/
+    top: 19%;
+  }
+  .stars {
+    /*position: relative;*/
+    list-style-type: none;
+  }
+  .all-stars div {
+    display: inline-block;
+  }
+  .all-stars {
+    line-height: 41px;
+    width: 212px;
+    text-align: center;
+    background-color: #e2d12b;
+    margin-left: -3px;
+    margin-bottom: 160px;
+    /*    box-shadow: 0 15px #999;*/
+    border-radius: 15px;
+    font-size: 45px;
+    /*position: absolute;*/
+    /* left: 768px;
+    top: 100px;*/
+    border: thick black solid;
+  }
+  .restart:hover {
+    background-color: #3e8e41
+  }
+  .restart:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+  .score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+    /* position: relative;*/
+  }
+  .score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+  .score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+  }
+  header {
+    margin-bottom: 53px;
+    margin-bottom: 12px;
+    /*  font-weight: 400px;*/
+  }
+  .score-panel .restart {
+    float: right;
+    cursor: pointer;
+  }
+  /*neww add*/
+  .post-create {
+    position: absolute;
+      bottom: -40em;
+      width: 477px;
+      margin-left: 78px;
+      margin-bottom: -1%;
+      top: 39em;
+  }
+  div.post-list {
+    position: absolute;
+      width: 429px;
+      left: 69%;
+      bottom: -40em;
+      margin-bottom: -1%;
+      height: 296px;
+      top: 42em;
+  }
+  .post-container {
+    /* background-color: lightblue; */
+    width: 429px;
+    height: 254px;
+    overflow: scroll;
+  }
+  .message{
+    position: absolute;
+    bottom: -160%;
+    left: 81%;
+  }
+  .portrait{
+    margin-left: 4%;
+    position: absolute;
+    width: 3%;
+  }
+  .users-performance{
+      width: 245px;
+      overflow: scroll;
+      position: absolute;
+      left: 19%;
+      top: 15em;
+      text-align: center;
+      height: 213px;
+  }
+
+  .performances-chart{
+      /* width: 12%; */
+      position: absolute;
+      height: 120%;
+      left: 5%;
+      top: 116%;
+      text-align: center;
+  }
+
+  .my-best-performance{
+      width: 16%;
+      position: absolute;
+      left: 43%;
+      top: 37em;
+  }
+  .pause{
+    position: absolute;
+    border: thick black solid;
+    left: 75%;
+    /* top: 284px; */
+    top: 58%;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 15px #999;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-top: 9em;
+   }
+   .description{
+    position: absolute;
+    top: -1.3em;
+    font-size: 6px;
+    width: 17em;
+    font-weight: bold;
+  }
+  .chat i {
+    color: peru;
+    font-size: 49px;
+}
+
+  /*end new add*/
+}
+/*---------------------------------------------------------------
+*/
+article{
+    line-height: 0px;
+}
+app-authentication{
+    width:73%;
+}
+app-header{
+    width:39%;
+}
+gameboard{
+    width:47%;
+}
+app-message{
+    margin-left:157%;
+    width: 100%;
+}
+div.writing-message-content{
+    margin-left:0;
+}
+app-messages{
+    width: 100%;
+    position: relative;
+}
+div.messages_right {
+  overflow-y: scroll;
+  width: 52%;
+  height: 638px;
+  border: 2px solid black;
+  margin-left:0;
+  /*margin-bottom: 20px;*/
+}
+div.appmessages{
+    width: 100%;
+}
+app-message-list{
+    width: 100%;
+}
+div.appmessages_right{
+    position: absolute;
+    left: 98%;
+     width: 100%;
+    top: 0;
+    height: 100%;
+    margin-left: 6%;
+}
+div.root-in-index{
+  height: 100%;
+  background-color: white;
+}
+
+
+.my-alert-bootstrap{
+  position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}

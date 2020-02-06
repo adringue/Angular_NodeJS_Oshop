@@ -1,0 +1,28 @@
+<p>
+  <a routerLink="/admin-new-product" class="btn btn-primary">Create New Product</a>
+  <a routerLink="/admin-new-category" class="btn btn-primary category">Create New category</a>
+</p>
+<p class="filter-item-by-name">
+  <input #query (keyup)="filter(query.value)" type="text" class="form-control" placeholder="Search for an Item...">
+</p>
+<!-- Data Table -->
+<div class="resizer">
+  <data-table [items]="allProducts" [itemCount]="itemCount" (reload)="reloadItems($event)">
+    <data-table-column [property]="'name'" [header]="'Name'" [sortable]="true" [resizable]="true">
+    </data-table-column>
+    <data-table-column [property]="'price'" [header]="'Price'" [sortable]="true" [resizable]="true">
+      <ng-template #dataTableCell let-item="item">
+        {{item.price | currency: 'USD': true}}
+      </ng-template>
+    </data-table-column>
+    <data-table-column [property]="'categoryId'" [header]="'Category ID'" [resizable]="true">
+    </data-table-column>
+    <data-table-column [property]="'category'" [header]="'Category Name'" [resizable]="true">
+    </data-table-column>
+    <data-table-column [property]="''" [header]="'Action'" [sortable]="true" [resizable]="true">
+      <ng-template #dataTableCell let-item="item">
+        <a [routerLink]="['/admin-products/',item._id,item.categoryId]">Edit product</a>
+      </ng-template>
+    </data-table-column>
+  </data-table>
+</div>

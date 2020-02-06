@@ -1,0 +1,1120 @@
+<div class='resume-container'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class='profile-pic'>
+          <form [formGroup]='form' (submit)='insertProfilePic()' class='clearfix'>
+            <div class='block-shape block-shape-profile-pic' *ngIf="imagePreview ">
+              <img [src]="imagePreview == null ? ' ' : imagePreview" [alt]="title">
+              <button class='choose-a-different-picture' mat-raised-button color='accent' type='button' (click)='changePicture()'
+                *ngIf="false">
+                change picture </button>
+            </div>
+            <div class='insert-profile-pic' *ngIf="false">
+              <button class='pick-profile-pic' mat-stroked-button type='button' (click)='filePicker.click()'>Pick
+                profile pic</button>
+              <input type='file' #filePicker (change)='onImagePicked($event)'>
+              <button class='confirm-profile-pic' mat-raised-button color='accent' type='submit'>confirm choosen
+                picture</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>
+        <div class='block-shape block-name' [style.borderStyle]=showBorder>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-12 adjust-name-padding'>
+                <div class='block-shape ' [style.borderStyle]=showBorder>
+                  <div class='container adjust-container-name-padding'>
+                    <div class='row'>
+                      <div class='col-md-4'>
+                        <div class='block-shape block-info' [style.borderStyle]=showBorder>
+                          <p>Firstname:</p>
+                        </div>
+                      </div>
+                      <div class='col-md-8'>
+                        <div class='block-shape ' [style.borderStyle]=showBorder>
+                          <p>Adrien</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-12 adjust-name-padding'>
+                <div class='block-shape ' [style.borderStyle]=showBorder>
+                  <div class='container adjust-container-name-padding'>
+                    <div class='row'>
+                      <div class='col-md-4'>
+                        <div class='block-shape block-info ' [style.borderStyle]=showBorder>
+                          <p>Lastname:</p>
+                        </div>
+                      </div>
+                      <div class='col-md-8'>
+                        <div class='block-shape' [style.borderStyle]=showBorder>
+                          <p>Nguesseu Chabdi</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-12 adjust-name-padding'>
+                <div class='block-shape ' [style.borderStyle]=showBorder>
+                  <div class='container adjust-container-name-padding'>
+                    <div class='row'>
+                      <div class='col-md-4'>
+                        <div class='block-shape block-info ' [style.borderStyle]=showBorder>
+                          <p>Email:</p>
+                        </div>
+                      </div>
+                      <div class='col-md-8'>
+                        <div class='block-shape' [style.borderStyle]=showBorder>
+                          <p>adrien.nguesseu@gmail.com</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row en haut -->
+          </div>
+        </div>
+      </div>
+      <div class='col-md-8 col-job-description'>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                <span>
+                  Objective
+                </span>
+              </div>
+            </div>
+            <div class="col-md-10">
+              <div class="block-shape" [style.borderStyle]=showBorder>
+                <span>
+                  I am looking for a position as general front end web application development entry level engineer.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="block-name">EMPLOYMENT</p>
+        <hr>
+      </div>
+    </div>
+    <div class='row employment-separator'>
+      <div class='col-md-4'>
+        <div class='block-shape first-block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Internship</p>
+                </div>
+              </div>
+              <div class="col-md-10 ">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>Software Test Engineer Intern </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='block-shape first-block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="col-md-10 portofolio-desc-and-tools">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="block-shape" [style.borderStyle]=showBorder>
+                        <span>
+                          Software Test Engineer Intern at Panasonic automotive System.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section">created test cases using features specifications and
+                                        traceability charts </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section">performed automated and manual functional test on
+                                        vehicle head unit </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='block-shape first-block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Date</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>2015</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jet camer LLC -->
+    <div class='row employment-separator'>
+      <div class='col-md-4'>
+        <div class='block-shape first-block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Entry level fullstack web applications developer</p>
+                </div>
+              </div>
+              <div class="col-md-10 ">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p class="volunteer">Web applications development </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='block-shape first-block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="col-md-10 portofolio-desc-and-tools">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="block-shape" [style.borderStyle]=showBorder>
+                        <span>
+                          Full stack web applications development at JetCamer LLC.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Enterprise content management DB</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                     </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='block-shape first-block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Date</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end jet camer LLC -->
+    <div class="row">
+      <div class="col-md-12">
+        <p class="block-name">EDUCATION</p>
+        <hr>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Degree</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>M.Sc. in Energy Engineering at the University of applied sciences of Kaiserslautern (Germany)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>Major in Power Engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <!-- <p>Date</p> -->
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <!-- <p>date content</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Certification</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>Front-End Web Developer Nanodegree at Udacity</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>  javaScript advanced techniques.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Date</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>2016</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="block-name">TECHNICAL EXPERIENCES/PROJECTS</p>
+        <hr>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Project</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>Portofolio and e-commerce application</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="col-md-10 portofolio-desc-and-tools">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="block-shape" [style.borderStyle]=showBorder>
+                        <span>
+                           build a M.E.A.N stack single page web project using MongoDb Atlas, Express.js, AngularJS and
+                          Node.js.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section">build a NodeJS/Express Restful(representational
+                                        state transfer) server independendly of the built in Angular CLI development
+                                        server to handle behind the scene requests coming from my Angular app </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Set up a modern development workflow with Angular/CLI.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section">Implement re-usable components
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section">use D3.js javascript library to visualize users
+                                        Matching game statistics</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Implement authentication and authorization using JSON Web Tokens (JWT) </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Deploy REST Api and Angular into AWS services (hoisting provider) </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <!-- <p>Date</p> -->
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <!-- <p>2018</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>project</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>Android native application</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="col-md-10 portofolio-desc-and-tools">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="block-shape" [style.borderStyle]=showBorder>
+                        <span>
+                          I built a native Android mobile application using AngularJS, Ionic and apache Cordova
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> build my app using AngularJS and generate JS,
+                                        CSS,HTML files through Ionic</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> use Android Studio to generate and install the
+                                        native android application in my mobile phone</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <!-- <p>Date</p> -->
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <!-- <p>2018</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- e-commerce section -->
+    <!-- <div class='row'>
+      <div class='col-md-4'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>project</p>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder>
+                  <p>E-commerce application</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="col-md-10 portofolio-desc-and-tools">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="block-shape" [style.borderStyle]=showBorder>
+                        <span>
+                          I built a MEAN Stack single page E-commerce single page application
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Build html templates using Bootstrap 4 classes</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Build Authentication and Authorization Module</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Build a product management Module</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Build a product catalog Module</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Build a shopping Cart Module</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="block-shape detailled-description" [style.borderStyle]=showBorder>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-1">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <span class="dot-size">.</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="block-shape" [style.borderStyle]=showBorder>
+                                      <div class="project-section"> Build a checkout Module</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                  <!-- <p>Date</p> -->
+                <!-- </div>
+              </div>
+              <div class="col-md-10">
+                <div class="block-shape" [style.borderStyle]=showBorder> -->
+                  <!-- <p>2018</p> -->
+                <!-- </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  -->
+    <!-- end e-commerce section -->
+    <div class="row">
+      <div class="col-md-12">
+        <p class="block-name">SKILLS, INTERESTS, LANGUAGES AND TECHNOLOGIES</p>
+        <hr>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-12 no-gutters'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container adjust-skills-container-padding">
+            <div class="row">
+              <!-- <div class="col-md-4 ">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-1 languages-padding">
+                      <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                        <p>Skills</p>
+                      </div>
+                    </div>
+                    <div class="col-md-11">
+                      <div class="block-shape" [style.borderStyle]=showBorder>
+                        <span>skill, </span>
+                        <span> skill, </span>
+                        <span> skill</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div class="col-md-12">
+                <div class="container">
+                  <div class="row">
+                    <div class='col-md-12'>
+                      <div class='block-shape' [style.borderStyle]=showBorder>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-2 adjust-interest-width">
+                              <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                                <p>Technical skills</p>
+                              </div>
+                            </div>
+                            <div class="col-md-10">
+                              <div class="block-shape tools" [style.borderStyle]=showBorder>
+                                <span> Visual Studio Code as IDE (Integrated development environment,</span>
+                                <span> Angular/cli,</span>
+                                <span>Loading Spinners,</span>
+                                <span>Mime-Type Validator,</span>
+                                <span>template Driven and Reactive Angular forms, </span>
+                                <span>Multer,</span>
+                                <span>HTML,</span>
+                                <span>CSS,</span>
+                                <span>jwt.io,</span>
+                                <span>IBM RTC,</span>
+                                <span>DOORS,</span>
+                                <span>Gulp,</span>
+                                <span>Sass,</span>
+                                <span>Emmet,</span>
+                                <span>Emmet,</span>
+                                <span>NPM,</span>
+                                <span>YARN,</span>
+                                <span>Grunt,</span>
+                                <span>TestBuilder,</span>
+                                <span>Angular HTTP client Interceptors for request leaving our app,</span>
+                                <span>Android Studio for converting generated Ionic files into Android native
+                                  application,</span>
+                                <span>Ionic 2,</span>
+                                <span>AWS (Amazon web service) application deployment,</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class='block-shape' [style.borderStyle]=showBorder>
+          <div class="container adjust-language-padding">
+            <div class="row">
+              <div class="col-md-4 ">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-1 languages-padding">
+                      <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                        <p>Languages</p>
+                      </div>
+                    </div>
+                    <div class="col-md-11">
+                      <div class="block-shape languages" [style.borderStyle]=showBorder>
+                        <span>german(fluent), </span>
+                        <span> english(fluent), </span>
+                        <span> french(Native)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="container">
+                  <div class="row">
+                    <div class='col-md-12'>
+                      <div class='block-shape' [style.borderStyle]=showBorder>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-2 adjust-interest-width">
+                              <div class="block-shape block-info" [style.borderStyle]=showBorder>
+                                <p class="interest">Interests</p>
+                              </div>
+                            </div>
+                            <div class="col-md-10">
+                              <div class="block-shape interests" [style.borderStyle]=showBorder>
+                                <span> Self learning through Udemy website,</span>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="view-border-buttons">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 adjust">
+          <button *ngIf="!borderIsVisible" mat-raised-button color="primary" (click)="showBorders()">show border</button>
+        </div>
+        <div class="col-md-6 adjust">
+          <button *ngIf="borderIsVisible" mat-raised-button color="accent" (click)="hideBorders()">hide border</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <!-- <p>Nguesseu/Sep/2018/adrien.nguesseu@gmail.com</p> -->
+  </footer>
+</div>

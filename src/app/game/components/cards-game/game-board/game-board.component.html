@@ -1,0 +1,5 @@
+<ul class="deck">
+  <li class="cardContainer" *ngFor="let picture of arrayOfPictures">
+    <app-game-card [cardPicture]=picture (collectEachCard)="collectClickedCard($event)"> </app-game-card>
+  </li>
+</ul>

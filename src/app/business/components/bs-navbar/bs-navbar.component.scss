@@ -1,0 +1,22 @@
+@import '../../../component-style-variable.scss';
+
+nav.fixed-top {
+  position: relative;
+}
+
+i.fa {
+  font-size: 30px;
+  color: $icon-cart-and-icon-home-color;
+}
+
+i.fa-pagelines {
+  color: $business-icon-color;
+}
+
+a.navbar-brand {
+  margin-left: 3rem;
+}
+
+.home {
+  margin-left: 37rem;
+}

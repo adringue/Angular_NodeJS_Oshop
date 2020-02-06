@@ -1,0 +1,20 @@
+.container-first-section {
+  position: relative;
+}
+.post-create {
+  position: absolute;
+  bottom: -186%;
+  width: 477px;
+  margin-left: 78px;
+}
+div.post-list {
+  position: absolute;
+  width: 429px;
+  left: 57%;
+  bottom: -502px;
+}
+.post-container {
+  width: 429px;
+  height: 254px;
+  overflow: scroll;
+}

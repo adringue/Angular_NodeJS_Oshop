@@ -1,0 +1,27 @@
+<div class="read-a-message"><span>Read a message of all current players</span></div>
+<div #expanpanel >
+  <div class="wrap-div" ></div>
+<mat-spinner *ngIf="isLoading"  ></mat-spinner>
+<mat-accordion  class="accordi" multi="true" *ngIf="posts.length > 0 && !isLoading">
+  <mat-expansion-panel  *ngFor="let post of posts" (click)="hideMessageIcon(post)">
+    <div>{{post.imagePath}}</div>
+    <mat-expansion-panel-header>
+     <span class='my-title'>{{ post.title }}</span>
+     <span class="message-status" *ngIf="post.messageStatus === valueSeen">{{ post.messageStatus }}</span>
+     <span class="message-status-unread" *ngIf="post.messageStatus === valueNotSeen">{{ post.messageStatus }}</span>
+
+    </mat-expansion-panel-header>
+    <div class="post-image">
+      <img *ngIf="post.imagePath" [src]="post.imagePath" [alt]="post.title">
+    </div>
+    <p>{{ post.content }}</p>
+    <p>{{post.imagePath}}</p>
+    <mat-action-row *ngIf="userIsAuthenticated">
+      <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p>
+<!-- <p #expanpanel>123333</p> -->
+</div>

@@ -1,0 +1,9 @@
+div.main-container{
+  height: 100%;
+}
+main{
+  height: 81%;
+  /* background-color: aquamarine; */
+  position: relative;
+
+}

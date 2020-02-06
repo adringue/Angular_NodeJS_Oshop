@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-spinner *ngIf='isLoading'></mat-spinner>
+  <form [formGroup]="form" (submit)="onLogin()" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput formControlName="email" type="email" pattern= "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder='E-Mail'>
+      <mat-error *ngIf="form.get('email').invalid">Please enter a valid email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type='password' formControlName='password' matInput placeholder='Password'>
+      <mat-error *ngIf="form.get('password').invalid">Please enter a valid password.</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type='submit '>Login</button>
+  </form>
+  <div class="text-center ">
+    <div style="width:200px; margin:auto;">
+    <div class="text-left"><span class="text-capitalize">Use email:</span> <span class="text-right" style="color: red; margin-left:15px;">test@test.com</span> </div>
+    <div class="text-left" style="margin-top:10px;"><span class="text-capitalize">Use password:</span> <span class="text-right" style="color: red; margin-left: 15px;">test_test</span> </div>
+    </div>
+  </div>
+</mat-card>

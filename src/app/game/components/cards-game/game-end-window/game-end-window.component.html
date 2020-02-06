@@ -1,0 +1,23 @@
+<div class="gameendwindow" *ngIf="showEndWindow" (click)="startANewGame()">
+  <span class="greeting">
+    <div class="replaythegame">Game Over!</div>
+    <div class="yourperformances">
+      <div>
+        <span class="mytime">Time Elapsed:    </span>
+        <span class="getmytime">{{myTime}}</span>
+        <span> Secondes</span>
+      </div>
+      <div>
+        <span class="mynumberofmove"> Number of move needed:    </span>
+        <span class="getnumberofmove">{{myMoves}}</span>
+        <span> Moves</span>
+      </div>
+      <div>
+        <span class="myrating">Rating:   </span>
+        <span class="getmyrating">{{myRating}}</span>
+        <span></span>
+      </div>
+    </div>
+    <div class="replaythegame"> PRESS TO PLAY AGAIN</div>
+  </span>
+</div>

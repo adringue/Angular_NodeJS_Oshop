@@ -1,0 +1,26 @@
+table.table {
+  margin: auto;
+  margin-top: 7%;
+  width: 62%;
+}
+p,
+h1 {
+  text-align: center;
+}
+button.position {
+  position: absolute;
+  left: 36%;
+  top: 13%;
+}
+.thumbnail{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-size: cover;
+}
+.check-out{
+  position: absolute;
+  left: 58%;
+  top: 13%;
+  width: 96px;
+}

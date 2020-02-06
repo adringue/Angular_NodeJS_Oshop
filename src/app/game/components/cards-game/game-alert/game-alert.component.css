@@ -1,0 +1,13 @@
+div.alert{
+  position: absolute;
+    border: thick black solid;
+    left: 51rem;
+    top: -8rem;
+    line-height: 19px;
+    width: 247px;
+    text-align: center;
+    background-color: #e2d12b;
+    box-shadow: 0 7px #999;
+    border-radius: 15px;
+    font-size: 13px;
+}

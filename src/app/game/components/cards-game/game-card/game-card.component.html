@@ -1,0 +1,6 @@
+<div class="frontandbacksidediv clearfix" (click)="cardClicked()">
+  <div class="card frontside" #frontsideCard [@clickedState2]="clickInfo2">
+    <i class="fa fa-{{cardPicture}} picture"></i>
+  </div>
+  <div #backside_picture [@clickedState]="clickInfo"></div>
+</div>

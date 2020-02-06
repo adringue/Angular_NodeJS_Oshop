@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-text {
+  text-align: center;
+}
+
+
+.user-perf{
+  padding-bottom: 13px;
+}
+
+.user-perf span{
+  font-weight: bold;
+}
+.perf-deco{
+  margin-left: 6px;
+    color: red;
+}

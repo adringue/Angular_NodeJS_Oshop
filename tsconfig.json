@@ -1,0 +1,73 @@
+// {
+//   "compileOnSave": false,
+//   "compilerOptions": {
+//     "baseUrl": "./",
+//     "outDir": "./dist/out-tsc",
+//     "sourceMap": true,
+//     "declaration": false,
+//     "moduleResolution": "node",
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//     "target": "es5",
+//     "typeRoots": [
+//       "node_modules/@types"
+//     ],
+//     "lib": [
+//       "es2017",
+//       "dom"
+//     ]
+//   }
+// }
+
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths":{
+   "shared/*":[
+     "app/shared/*"
+   ],
+   "shared-business/*":[
+    "app/shared-business/*"
+  ],
+  "user/*":[
+    "app/user/*"
+  ],
+  "user-auth/*":[
+    "app/user-auth/*"
+  ],
+  "business/*":[
+    "app/business/*"
+  ],
+  "game/*":[
+    "app/game/*"
+  ],
+  "personal/*":[
+    "app/personal/*"
+  ],
+  "home-page/*":[
+    "app/home-page/*"
+  ],
+  "business-admin/*":[
+    "app/business-admin/*"
+  ],
+  "app-routing-mod/*":[
+    "app/app-routing-mod/*"
+  ],
+    },
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  }
+}

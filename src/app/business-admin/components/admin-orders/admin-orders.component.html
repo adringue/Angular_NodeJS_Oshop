@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <button (click)="createOrders()" class="btn btn-danger">
+        Create Orders Database
+      </button>
+    </div>
+    <div class="col-md-10">
+      <h1 class="centering">All Users Orders</h1>
+      <ng-container *ngIf="allOrders">
+        <p class="centering">
+          {{allOrders.length}} orders in records.
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-center">
+              </th>
+              <th class="text-center">
+                Order Id
+              </th>
+              <th class="text-center">
+                User Id
+              </th>
+              <th class="text-center">Data placed </th>
+              <th class="text-center">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of allOrders">
+              <td>
+                Order
+              </td>
+              <td class="text-center">{{item._id}}</td>
+              <td class="text-center">
+                {{item.userId}}
+              </td>
+              <td class="text-center">{{getDate(item.datePlace)}}</td>
+              <td class="text-center"><a>More details</a></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>
+              </th>
+              <th></th>
+              <th></th>
+              <th class="text-right"></th>
+            </tr>
+          </tfoot>
+        </table>
+      </ng-container>
+    </div>
+  </div>
+</div>

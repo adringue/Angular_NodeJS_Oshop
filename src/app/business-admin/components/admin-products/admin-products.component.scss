@@ -1,0 +1,24 @@
+.category {
+  margin-left: 50px;
+}
+table.adjust {
+  display: block;
+  margin: auto;
+  width: 39%;
+  height: 500px;
+  /* overflow-y: scroll; */
+}
+table.adjust.adjust-second {
+  height: 172px;
+  margin-top: 60px;
+  overflow: scroll;
+}
+p.filter-item-by-name {
+  width: 26%;
+    margin: auto;
+    margin-bottom: 18px;
+    margin-right: 38%
+}
+.resizer{
+  margin: 0 17%;
+}

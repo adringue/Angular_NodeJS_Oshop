@@ -1,0 +1,18 @@
+<div class="row category-setting">
+  <div class="col-3">
+   <app-product-filter [categoryParam]="categoryParam"> </app-product-filter>
+  </div>
+  <div class="col-9">
+    <div class="row row-background-color">
+      <ng-container *ngFor="let product of filteredProducts; let i=index">
+        <div class="col">
+          <!-- card inside each column -->
+           <app-product-card [product]=product [shoppingCart]=cart> </app-product-card>
+        </div>
+        <!-- renderring after every 2 products -->
+        <div *ngIf="(i+1)%2===0" class="w-100">
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

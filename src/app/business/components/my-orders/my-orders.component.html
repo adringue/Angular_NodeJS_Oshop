@@ -1,0 +1,46 @@
+<h1 class="centering">My Orders</h1>
+<ng-container *ngIf="myOrdersArray">
+  <p class="centering">
+    You have {{myOrdersArray.length}} orders in records.
+  </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-center">
+        </th>
+        <th class="text-center">
+          Order Id
+        </th>
+        <th class="text-center">
+          User Id
+        </th>
+        <th class="text-center">Data placed </th>
+        <th class="text-center">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of myOrdersArray">
+        <td>
+
+          Order
+        </td>
+        <td class="text-center">{{item._id}}</td>
+        <td class="text-center">
+          {{item.userId}}
+        </td>
+        <td class="text-center">{{getDate(item.datePlace)}}</td>
+        <td class="text-center"><a>More details</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>
+        </th>
+        <th></th>
+        <th></th>
+        <th class="text-right"></th>
+      </tr>
+    </tfoot>
+  </table>
+</ng-container>

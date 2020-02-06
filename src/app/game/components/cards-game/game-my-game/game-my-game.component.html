@@ -1,0 +1,45 @@
+<div class="container container2" *ngIf="!myGameContainerIsVisible">
+  <div class="row">
+    <div class="col">
+      <app-game-stern></app-game-stern>
+    </div>
+  </div>
+  <div class="row score-panel">
+    <div class="col">
+      <div class="container">
+        <div class="row first_interaction_block">
+          <div class="col">
+            <app-game-alert></app-game-alert>
+          </div>
+          <div class="col">
+            <app-game-start-button></app-game-start-button>
+          </div>
+          <div class="col">
+            <app-game-timer></app-game-timer>
+          </div>
+          <div class="col">
+            <app-game-pause class="clearfix"></app-game-pause>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <app-game-board></app-game-board>
+    </div>
+    <div class="col">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <app-game-continue-button></app-game-continue-button>
+          </div>
+          <div class="row">
+            <app-game-move></app-game-move>
+          </div>
+          <div>
+            <app-game-restart></app-game-restart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-6">
+    <form #f="ngForm" (ngSubmit)="save(f.value)" class="my-form">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input #title="ngModel" [(ngModel)]="itemEdit['name']" name="title" id="title" type="text" class="form-control"
+          required>
+        <div class="my-alert-bootstrap alert-danger" *ngIf="title?.touched && title?.invalid">
+          <div *ngIf="title.errors.required">Name is required!</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Price</label>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input #price="ngModel" [(ngModel)]="itemEdit['price']" name="price" id="price" type="number" class="form-control"
+            required [min]="0">
+        </div>
+        <div class="my-alert-bootstrap alert-danger" *ngIf="price?.touched && price?.invalid">
+          <div *ngIf="price?.errors.required">
+            price is required!
+          </div>
+          <div *ngIf="price?.errors.min">
+            Price should be 0 or higher!
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Category</label>
+        <select #category="ngModel" [(ngModel)]="itemEdit['category']" name="category" id="category" type="text" class="form-control"
+          required>
+          <option *ngFor="let category_obj of categoriesArray[0]" [value]="category_obj['name']">{{category_obj['name']}}</option>
+        </select>
+        <div class="my-alert-bootstrap alert-danger" *ngIf="category?.touched && category?.invalid">
+          <div *ngIf="category?.errors.required">Category is required!</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Image URL</label>
+        <input #imageUrl="ngModel" [(ngModel)]="itemEdit['banner'][0].url" name="imageUrl" id="imageUrl" type="text"
+          class="form-control" required url>
+        <div class="my-alert-bootstrap alert-danger" *ngIf="imageUrl?.touched && imageUrl?.invalid">
+          <div *ngIf="imageUrl?.errors.required"> Image URL is required</div>
+          <div *ngIf="imageUrl?.errors.url"> Please enter a valid URL</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Save</button>
+      <button type="button" (click)="delete()" [disabled]="!productId && !productCategoryId" class="btn btn-danger delete-button">Delete</button>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <app-product-card [product]="itemEdit" [showActions]="false"> </app-product-card>
+  </div>
+</div>

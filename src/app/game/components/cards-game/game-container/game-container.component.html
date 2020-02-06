@@ -1,0 +1,33 @@
+<div class="gamecontainer">
+  <div class="gamecontainer-first-section clearfix">
+    <div class="portrait">
+      <app-portrait></app-portrait>
+    </div>
+    <div>
+      <app-game-end-window></app-game-end-window>
+    </div>
+    <div>
+      <app-game-my-game></app-game-my-game>
+    </div>
+    <div class="post-create">
+      <app-post-create></app-post-create>
+    </div>
+    <div class="users-performance">
+      <app-performances-list *ngIf="notGameEndWindow"></app-performances-list>
+    </div>
+    <div class="message">
+      <app-chat></app-chat>
+    </div>
+    <div class="post-list">
+      <div class="post-container">
+        <app-post-list></app-post-list>
+      </div>
+    </div>
+    <div class="performances-chart">
+      <app-performance-bar-chart *ngIf="notGameEndWindow"></app-performance-bar-chart>
+    </div>
+    <div class="my-best-performance">
+      <app-my-best-performance *ngIf="notGameEndWindow"></app-my-best-performance>
+    </div>
+  </div>
+</div>

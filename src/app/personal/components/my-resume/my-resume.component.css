@@ -1,0 +1,176 @@
+div.resume-container {
+  width: 100%;
+  height: 152%;
+  position: relative;
+  background-color: white;
+}
+.block-shape {
+  border: 0.1px solid black;
+}
+div.container {
+  width: 100%;
+  height: 105.01%;
+  background-color: white;
+}
+div.block-shape-profile-pic {
+  height: 118px;
+  width: 133px;
+  position: absolute;
+  left: 50%;
+  top: 5em;
+  margin-left: -52px;
+  margin-top: -65px;
+}
+div.block-shape-profile-pic img {
+  width: 100%;
+  height: 100%;
+}
+.profile-pic {
+  position: relative;
+}
+div.block-name {
+  margin-top: 20px;
+}
+div.block-looking-for {
+  margin-top: 34px;
+}
+footer {
+  position: absolute;
+  left: 45%;
+  top: 111%;
+}
+footer p{
+  margin-top: 20px;
+}
+img{
+  width: 77px;
+  height: 77px;
+}
+button.choose-a-different-picture{
+  min-width: 77px;
+  font-size: 7px;
+  margin-top: 3px;
+}
+div.insert-profile-pic{
+  position: absolute;
+  font-size: 7px;
+  margin-top: 6px;
+  left: 55%;
+}
+button.confirm-profile-pic{
+  font-size: 8px;
+  font-weight: bold;
+}
+button.pick-profile-pick{
+  font-size: 8px;
+  font-weight: bold;
+}
+div.col-job-description{
+  margin-top: 20px;
+}
+div.col-job-description div.col-md-2{
+  width: 13%;
+}
+div.adjust-container-name-padding{
+padding-left: 0;
+}
+div.adjust-name-padding{
+padding-left: 0;
+}
+div.col-md-2{
+  padding-left: 0;
+}
+.block-info{
+  font-weight: 600;
+}
+hr{
+  margin-bottom:4px;
+  margin-top:0;
+}
+.block-name{
+  margin-bottom: 1px;
+}
+div.portofolio-desc-and-tools div.col-md-12{
+  padding:0;
+}
+span.project-section{
+  margin-left: 10px;
+}
+.block-looking-for div.container{
+  padding-left: 0;
+}
+.view-border-buttons{
+  width: 6%;
+  position: absolute;
+  bottom: 88%;
+  left: 80%;
+  top: 99%;
+}
+.view-border-buttons button{
+  width: 100%;
+  font-size: 10px;
+}
+.dot-description{
+  margin-right: 4px;
+}
+.detailled-description{
+  padding: 5px;
+}
+.detailled-description div.container{
+  padding-right: 0;
+}
+.detailled-description div.col-md-1{
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 2px;
+  font-weight: bolder;
+}
+.detailled-description div.col-md-11{
+  padding-left: 7px;
+    padding-right: 0;
+    width: 98.3%;
+}
+div.employment-separator{
+  margin-bottom: 7px;
+}
+div.languages-col-padding{
+  width: 40.82%;
+  padding-left: 0px;
+}
+div.languages-padding{
+  padding-left: 0;
+}
+.interest{
+  margin-right: 10px;
+}
+div.adjust-interest-width{
+  width: 5.99%;
+}
+div.tools span{
+  margin-right: 7px;
+}
+div.languages span{
+  margin-right: 7px;
+}
+div.interests span{
+  margin-right: 7px;
+}
+div.adjust-skills-container-padding{
+  padding-left: 0;
+}
+div.adjust-language-padding{
+  padding-left: 0;
+}
+div.languages{
+  margin-left: 49px;
+}
+.volunteer{
+  margin-left: 10px;
+}
+div.no-gutters{
+padding-left: 0;
+}
+div.adjust{
+  max-width: 100%;
+
+}
