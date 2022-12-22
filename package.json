@@ -33,7 +33,7 @@
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "http": "0.0.0",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose-unique-validator": "^2.0.1",
     "multer": "^1.4.1",
     "ng2-validation": "^4.2.0",
